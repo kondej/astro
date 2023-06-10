@@ -2,8 +2,8 @@
 title: Kondej Astrophotography
 description: >-
   A website dedicated to my best astrophotography images.
-baseurl: "/"
-url: "https://kondej.github.io/astro/"
+baseurl: "/astro"
+url: "https://kondej.github.io/"
 github_username:  kondej
 
 paginate: 16
