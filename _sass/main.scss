@@ -1,0 +1,15 @@
+@import "colors";
+@import "elements";
+@import "gallery";
+@import "post";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+	background: $background;
+	font-family: 'Lato', sans-serif;
+	color: $font-color;
+}

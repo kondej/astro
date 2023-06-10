@@ -1,0 +1,84 @@
+header {
+    align-items: center;
+	display: flex;
+    justify-content: space-between;
+    padding: 3em;
+
+    a {
+        color: $font-color;
+        &:hover {
+            color: $font-color;
+        }
+    }
+
+    svg {
+        fill: $font-color;
+    }
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &:hover {
+        color: darken($link-color, 30%);
+    }
+}
+
+nav {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+    margin-right: 2em;
+
+    a {
+        padding: 1em;
+        color: $font-color;
+        transition: color .2s ease;
+
+        &:hover {
+            color: darken($font-color, 40%);
+        }
+    }
+}
+
+img {
+	max-width: 100%;
+}
+
+.pagination, footer {
+    clear: both;
+	text-align: center;
+	padding: 2em;
+    a {
+        color: $font-color;
+        &:hover {
+            color: darken($font-color, 40%);
+        }
+    }
+}
+
+.next {
+    margin-left: 0.8em;
+}
+
+.previous {
+    margin-right: 0.8em;
+}
+
+.pagination-end {
+    color: darken($font-color, 62%);
+}
+
+@media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2em;
+    }
+
+    h1 {
+        margin-bottom: 0.5em;
+    }
+}

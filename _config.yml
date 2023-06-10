@@ -1,0 +1,16 @@
+
+title: Kondej Astrophotography
+description: >-
+  A website dedicated to my best astrophotography images.
+baseurl: "/"
+url: "https://kondej.github.io/astro/"
+github_username:  kondej
+
+paginate: 16
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed

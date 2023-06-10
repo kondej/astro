@@ -1,1 +1,32 @@
-Astro
+---
+title: Home
+layout: default
+---
+
+<div class="gallery">
+  {% for post in paginator.posts %}
+  <div class="gallery-image">
+    {% if post.img %}
+    <a href="{{ post.url }}"><img src={{ "/assets/img/thumbnail/" | prepend: site.baseurl | append: post.img |
+        append: "_thumbnail." | append: post.img_format }} alt="{{post.title}}"></a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+  <span class="previous pagination-end">Previous</span>
+  {% endif %}
+  <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+  <span class="next pagination-end">Next</span>
+  {% endif %}
+</div>
+{% endif %}
